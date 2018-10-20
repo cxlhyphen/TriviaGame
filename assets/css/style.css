@@ -1,0 +1,18 @@
+body {
+    background: #707070;
+}
+
+.jumbotron {
+    background-image: url("../images/michal-parzuchowski-324218-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#game {
+    height: 600px;
+}
+
+#display {
+    text-align: center;
+}
