@@ -16,31 +16,31 @@ var questions = [
         question: "Which country consumes the most coffee per capita?",
         answers: ["Finland", "Belgium", "Italy", "United States"],
         correctAnswer: "Finland",
-        image: "../images.joakim-hokasalo-finflag.jpg"
+        image: '<img src="https://github.com/cxlhyphen/TriviaGame/blob/master/assets/images/joakim-honkasalo-finflag.jpg?raw=true">'
     },
     {
         question: "How much coffee does the average American coffee drinker consume in a day? (1 cup = 8 oz.)",
         answers: ["1.5 cups", "2 cups", "3.1 cups", "2.7 cups"],
         correctAnswer: "3.1 cups",
-        image: "A"
+        image: '<img src="https://github.com/cxlhyphen/TriviaGame/blob/master/assets/images/emre-gencer-coffeecup.jpg?raw=true">'
     },
     {
         question: "Which country grows and exports the most coffee?",
         answers: ["India", "Colombia", "Brazil", "Indonesia"],
         correctAnswer: "Brazil",
-        image: "A"
+        image: '<img src="https://github.com/cxlhyphen/TriviaGame/blob/master/assets/images/sergio-souza-brazilflag.jpg?raw=true">'
     },
     {
         question: "What does espresso literally mean in Italian?",
         answers: ["Speed it up", "To go", "Forced out", "Intense"],
         correctAnswer: "Forced out",
-        image: "A"
+        image: '<img src="https://github.com/cxlhyphen/TriviaGame/blob/master/assets/images/rawpixel-espresso.jpg?raw=true">'
     },
     {
         question: "Coffee beans grow on a ______.",
         answers: ["vine", "bush", "tree", "roots"],
         correctAnswer: "bush",
-        image: "A"
+        image: '<img src="https://github.com/cxlhyphen/TriviaGame/blob/master/assets/images/tina-guina-beans.jpg?raw=true">'
     }
 ];
 
@@ -81,6 +81,7 @@ var game = {
         game.unanswered++;
         $("#display").html("<h2>Time&rsquo;s Up!</h2>");
         $("#display").append("<p>The correct answer is: " + questions[game.currQuestion].correctAnswer + "</p>");
+        $("#display").append(questions[game.currQuestion].image);
 
         if(game.currQuestion == questions.length - 1) {
             setTimeout(game.results, 2000);
@@ -114,9 +115,9 @@ var game = {
         $("#display").append(questions[game.currQuestion].image);
 
         if(game.currQuestion == questions.length - 1) {
-            setTimeout(game.results, 2000);
+            setTimeout(game.results, 4000);
         } else {
-            setTimeout(game.nextQ, 2000)
+            setTimeout(game.nextQ, 4000)
         }
         
     },
@@ -126,11 +127,12 @@ var game = {
         game.incorrect++;
         $("#display").html("<h2>Incorrect</h2>");
         $("#display").append("<p>The correct answer is: " + questions[game.currQuestion].correctAnswer + "</p>");
+        $("#display").append(questions[game.currQuestion].image);
 
         if(game.currQuestion == questions.length - 1) {
-            setTimeout(game.results, 2000);
+            setTimeout(game.results, 4000);
         } else {
-            setTimeout(game.nextQ, 2000)
+            setTimeout(game.nextQ, 4000)
         }
     },
 
@@ -144,6 +146,3 @@ var game = {
     }
 
 }
-
-
-//Main Process
